@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IvtSimulator.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,19 @@ namespace IvtSimulator
     /// </summary>
     public partial class App : Application
     {
+        private MainViewModel dataContext;
+
+        private void OnStartup(object sender, StartupEventArgs e)
+        {
+            dataContext = new MainViewModel();
+
+            var window = new MainWindow()
+            {
+                DataContext = dataContext,
+            };
+            MainWindow = window;
+            MainWindow.Show();
+        }
+
     }
 }

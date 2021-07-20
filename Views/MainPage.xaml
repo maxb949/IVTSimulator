@@ -1,0 +1,122 @@
+﻿<Page x:Class="IvtSimulator.Views.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:IvtSimulator.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="785.5" d:DesignWidth="1562"
+      Title="MainPage">
+    <Page.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFB4B4B4" Offset="0.997"/>
+            <GradientStop Color="#FFF3F3F3" Offset="0.003"/>
+        </LinearGradientBrush>
+    </Page.Background>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image HorizontalAlignment="Left" VerticalAlignment="Top" Source="/IvtSimulator;component/Assets/Mnemoshem4.png" Stretch="None" Height="787" Width="1562" Margin="2,0,0,0"/>
+
+        <TextBlock Margin="20,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" FontSize="24"><Run Text="Симулятор гидравлической системы"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="194,115,0,0" TextWrapping="Wrap" Text="P1" VerticalAlignment="Top" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Margin="194,506,0,0" TextWrapping="Wrap" Text="P2" VerticalAlignment="Top" FontSize="36"/>
+        <Slider HorizontalAlignment="Left" Margin="355,85,0,0" VerticalAlignment="Top" Height="29" Width="144" Foreground="#FF41535B" 
+                Value="{Binding K1}"
+                Background="{x:Null}" BorderBrush="#FF131313" TickPlacement="BottomRight" Maximum="1" TickFrequency="0.1" Cursor="Hand"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1138,646,0,0" TextWrapping="Wrap" Text="P4" VerticalAlignment="Top" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1136,254,0,0" TextWrapping="Wrap" Text="P3" VerticalAlignment="Top" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Margin="988,113,0,0" TextWrapping="Wrap" Text="h1" VerticalAlignment="Top" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Margin="982,506,0,0" TextWrapping="Wrap" Text="h2" VerticalAlignment="Top" FontSize="36"/>
+        <ProgressBar HorizontalAlignment="Left" Height="230" Margin="892,444,0,0" VerticalAlignment="Top" Width="14" Value="{Binding L2, Mode=OneWay}" Orientation="Vertical" Background="#FF999999">
+            <ProgressBar.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF25D10A" Offset="0"/>
+                    <GradientStop Color="#FF4C8543" Offset="0.47"/>
+                    <GradientStop Color="#FF319921" Offset="1"/>
+                </LinearGradientBrush>
+            </ProgressBar.Foreground>
+        </ProgressBar>
+        <TextBlock HorizontalAlignment="Left" Margin="737,154,0,0" TextWrapping="Wrap" Text="E-1" VerticalAlignment="Top" FontSize="58" RenderTransformOrigin="9.6,1.75" Foreground="#FFFBFBFB" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="737,529,0,0" TextWrapping="Wrap" Text="E-2" VerticalAlignment="Top" FontSize="58" RenderTransformOrigin="9.6,1.75" Foreground="#FFFBFBFB" FontWeight="Bold"/>
+        <Slider HorizontalAlignment="Left" Margin="355,410,0,0" VerticalAlignment="Top" Height="29" Width="144" Foreground="#FF41535B" Background="{x:Null}" BorderBrush="#FF131313" AutoToolTipPlacement="TopLeft" TickPlacement="BottomRight" Value="{Binding K2}" Maximum="1" Cursor="Hand" TickFrequency="0.1"/>
+        <Slider HorizontalAlignment="Left" Margin="498,212,0,0" VerticalAlignment="Top" Height="126" Width="47" Foreground="#FF41535B" Background="{x:Null}" BorderBrush="#FF131313" AutoToolTipPlacement="TopLeft" TickPlacement="BottomRight" Orientation="Vertical" Value="{Binding K3}" Maximum="1" TickFrequency="0.1" Cursor="Hand"/>
+        <Slider HorizontalAlignment="Left" Margin="1136,366,0,0" VerticalAlignment="Top" Height="30" Width="144" Foreground="#FF41535B" Background="{x:Null}" BorderBrush="#FF131313" AutoToolTipPlacement="TopLeft" TickPlacement="BottomRight" Value="{Binding K4}" Maximum="1" TickFrequency="0.1" Cursor="Hand"/>
+        <Slider HorizontalAlignment="Left" Margin="1136,757,0,0" VerticalAlignment="Top" Height="30" Width="144" Foreground="#FF41535B" Background="{x:Null}" BorderBrush="#FF131313" AutoToolTipPlacement="TopLeft" TickPlacement="BottomRight" Value="{Binding K5}" Maximum="1" TickFrequency="0.1" Cursor="Hand"/>
+        <ProgressBar HorizontalAlignment="Left" Height="230" Margin="892,45,0,0" VerticalAlignment="Top" Width="14" Value="{Binding L1, Mode=OneWay}" Orientation="Vertical" Background="#FF999999">
+            <ProgressBar.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF25D10A" Offset="0"/>
+                    <GradientStop Color="#FF4C8543" Offset="0.47"/>
+                    <GradientStop Color="#FF319921" Offset="1"/>
+                </LinearGradientBrush>
+            </ProgressBar.Foreground>
+        </ProgressBar>
+        <TextBlock HorizontalAlignment="Left" Margin="453,25,0,0" TextWrapping="Wrap" Text="V1" VerticalAlignment="Top" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="466,480,0,0" TextWrapping="Wrap" Text="V2" VerticalAlignment="Top" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="581,312,0,0" TextWrapping="Wrap" Text="V3" VerticalAlignment="Top" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1298,364,0,0" TextWrapping="Wrap" Text="V4" VerticalAlignment="Top" FontSize="24" Height="32"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1311,750,0,0" TextWrapping="Wrap" Text="V5" VerticalAlignment="Top" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1033,512,0,0" TextWrapping="Wrap" Text="{Binding L2, Mode=OneWay, StringFormat=\{0:F1\}}" VerticalAlignment="Top" FontSize="26" Width="130" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1033,119,0,0" TextWrapping="Wrap" Text="{Binding L1, Mode=OneWay, StringFormat=\{0:F1\}}" VerticalAlignment="Top" FontSize="26" Width="130" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="234,119,0,0" TextWrapping="Wrap" Text="{Binding P1, Mode=OneWay, StringFormat=\{0:F1\}}" VerticalAlignment="Top" FontSize="26" Width="130" FontWeight="Bold" Height="35"/>
+        <TextBlock HorizontalAlignment="Left" Margin="234,512,0,0" TextWrapping="Wrap" Text="{Binding P2, Mode=OneWay, StringFormat=\{0:F1\}}" VerticalAlignment="Top" FontSize="26" Width="130" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1181,260,0,0" TextWrapping="Wrap" Text="{Binding P3, Mode=OneWay, StringFormat=\{0:F1\}}" VerticalAlignment="Top" FontSize="26" Width="130" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1183,652,0,0" TextWrapping="Wrap" Text="{Binding P4, Mode=OneWay, StringFormat=\{0:F1\}}" VerticalAlignment="Top" FontSize="26" Width="130" FontWeight="Bold"/>
+        <ProgressBar HorizontalAlignment="Left" Height="44" Margin="443,15,0,0" VerticalAlignment="Top" Width="8" Value="{Binding K1, Mode=OneWay}" Orientation="Vertical" Background="#FF999999" RenderTransformOrigin="0.5,0.5" Maximum="1">
+            <ProgressBar.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF25D10A" Offset="0"/>
+                    <GradientStop Color="#FF4C8543" Offset="0.47"/>
+                    <GradientStop Color="#FF319921" Offset="1"/>
+                </LinearGradientBrush>
+            </ProgressBar.Foreground>
+        </ProgressBar>
+        <ProgressBar HorizontalAlignment="Left" Height="44" Margin="593,259,0,0" VerticalAlignment="Top" Width="8" Value="{Binding K3, Mode=OneWay}" Orientation="Vertical" Background="#FF999999" RenderTransformOrigin="0.5,0.5" Maximum="1">
+            <ProgressBar.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF25D10A" Offset="0"/>
+                    <GradientStop Color="#FF4C8543" Offset="0.47"/>
+                    <GradientStop Color="#FF319921" Offset="1"/>
+                </LinearGradientBrush>
+            </ProgressBar.Foreground>
+        </ProgressBar>
+        <ProgressBar HorizontalAlignment="Left" Height="44" Margin="453,468,0,0" VerticalAlignment="Top" Width="8" Value="{Binding K2, Mode=OneWay}" Orientation="Vertical" Background="#FF999999" RenderTransformOrigin="0.5,0.5" Maximum="1">
+            <ProgressBar.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF25D10A" Offset="0"/>
+                    <GradientStop Color="#FF4C8543" Offset="0.47"/>
+                    <GradientStop Color="#FF319921" Offset="1"/>
+                </LinearGradientBrush>
+            </ProgressBar.Foreground>
+        </ProgressBar>
+        <ProgressBar HorizontalAlignment="Left" Height="44" Margin="1285,352,0,0" VerticalAlignment="Top" Width="8" Value="{Binding K4, Mode=OneWay}" Orientation="Vertical" Background="#FF999999" RenderTransformOrigin="0.5,0.5" Maximum="1">
+            <ProgressBar.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF25D10A" Offset="0"/>
+                    <GradientStop Color="#FF4C8543" Offset="0.47"/>
+                    <GradientStop Color="#FF319921" Offset="1"/>
+                </LinearGradientBrush>
+            </ProgressBar.Foreground>
+        </ProgressBar>
+        <ProgressBar HorizontalAlignment="Left" Height="44" Margin="1298,732,0,0" VerticalAlignment="Top" Width="8" Value="{Binding K5, Mode=OneWay}" Orientation="Vertical" Background="#FF999999" RenderTransformOrigin="0.5,0.5" Maximum="1">
+            <ProgressBar.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF25D10A" Offset="0"/>
+                    <GradientStop Color="#FF4C8543" Offset="0.47"/>
+                    <GradientStop Color="#FF319921" Offset="1"/>
+                </LinearGradientBrush>
+            </ProgressBar.Foreground>
+        </ProgressBar>
+        <TextBlock HorizontalAlignment="Left" Margin="982,393,0,0" TextWrapping="Wrap" Text="PB" VerticalAlignment="Top" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Margin="982,-3,0,0" TextWrapping="Wrap" Text="PB" VerticalAlignment="Top" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1023,4,0,0" TextWrapping="Wrap" Text="{Binding PB1, Mode=OneWay, StringFormat=\{0:F1\}}" VerticalAlignment="Top" FontSize="26" Width="130" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1023,401,0,0" TextWrapping="Wrap" Text="{Binding PB2, Mode=OneWay, StringFormat=\{0:F1\}}" VerticalAlignment="Top" FontSize="26" Width="130" FontWeight="Bold"/>
+
+    </Grid>
+</Page>
